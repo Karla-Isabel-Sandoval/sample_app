@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
+  root 'static_pages#home'
   get 'static_pages/home'
   get 'static_pages/help'
   get 'static_pages/about'
-  root 'application#hello'
+  get 'static_pages/contact'
+  #get 'static_pages/root'
 end
 
 #using the get above arranges for route to respond to a GET request
