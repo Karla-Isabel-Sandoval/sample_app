@@ -6,4 +6,4 @@ Rails.application.routes.draw do
 end
 #using the get above arranges for route to respond to a GET request
 # For details on the DSL available within this file, see
-#http://guides.rubyonrails.org/routing.html
+#http://guides.rubyonrails.org/routing.htm
