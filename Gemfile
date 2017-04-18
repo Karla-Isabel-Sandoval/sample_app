@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 ruby '2.4.0'
 
 gem 'rails', '~> 5.0.2'
+gem 'bcrypt', '3.1.11'
 
 gem 'coffee-rails', '~> 4.2.1'
 gem 'jbuilder', '~> 2.4.1'
