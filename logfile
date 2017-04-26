@@ -1,0 +1,5 @@
+LOG:  database system was shut down at 2017-04-26 10:38:23 PDT
+LOG:  MultiXact member wraparound protections are now enabled
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+FATAL:  database "Hyacinth" does not exist

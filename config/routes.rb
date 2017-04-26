@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get '/contact', to: 'static_pages#contact'
   get '/signup', to: 'users#new'
   post '/signup', to: 'users#create'
+  #get '/login', to: 'sessions#new', as: :login
   resources :users
 end
 #using the get above arranges for route to respond to a GET request
