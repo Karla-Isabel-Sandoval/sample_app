@@ -6,6 +6,11 @@ class UserTest < ActiveSupport::TestCase
     @user = User.new(name: "Example User", email: "user@example.com",
       password: "foobar", password_confirmation: "foobar")
   end
+
+  test "authenticated? should return false for a user with nil digest" do
+    assert_not @user.authenticated?('')
+  end
+end
   #requirement for pw to be present & requirement for minimum length
   test "password should be present (nonblank)" do
   @user.password = "  " * 6
