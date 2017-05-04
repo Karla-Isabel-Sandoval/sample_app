@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   attr_accessor :email
-  
+
   def show
     @user = User.find(params[:id])
   end
