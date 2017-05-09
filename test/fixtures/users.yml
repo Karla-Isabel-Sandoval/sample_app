@@ -2,7 +2,7 @@
 one:
   name: Michael Example
   email: michael@example.com
-  password_digest: '123abcdefgh'
+  password_digest: '$2a$10$zFylxr8V21VOdacs.aiV6eselg5bZauFSimalFJR0CDPqxsGiqXpC'
 
   # one:
   #   name: MyString
