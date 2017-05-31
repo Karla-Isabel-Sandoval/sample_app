@@ -5,6 +5,7 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
   def setup
     @user = User.new(email: "tangelo@example.com", name: "Angelo Example", password: 'password')
     @user.save!
+    @user.activate
   end
 
   test "login with valid information followed by logout" do
@@ -20,7 +21,7 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
     delete logout_path
     assert_not is_logged_in?
     assert_redirected_to root_url
-    #simulate a user clicking logout in a second window.
+    # simulate a user clicking logout in a second window.
     delete logout_path
     follow_redirect!
     assert_select "a[href=?]", login_path

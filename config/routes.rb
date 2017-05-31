@@ -7,11 +7,14 @@ Rails.application.routes.draw do
   get '/about', to: 'static_pages#about'
   get '/contact', to: 'static_pages#contact'
   get '/signup', to: 'users#new'
-  #post '/signup', to: 'users#create'
   get '/login', to: 'sessions#new'
+  # get '/account_activations', to: 'sessions#new'
+  get 'password_resets/edit/:id', to: 'account_activations#edit'
+  # just added line 10
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
   resources :users
+  resources :account_activations, only: [:edit]
 end
 #using the get above arranges for route to respond to a GET request
 # For details on the DSL available within this file, see

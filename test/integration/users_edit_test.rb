@@ -3,6 +3,8 @@ require 'test_helper'
 
 class UsersEditTest < ActionDispatch::IntegrationTest
   def setup
+    @admin  = users(:one)
+    @non_admin = users(:archer)
     @user = users(:one)
   end
 
@@ -15,7 +17,7 @@ class UsersEditTest < ActionDispatch::IntegrationTest
                                               password: "foo",
                                               password_confirmation: "bar"}}
     assert_template 'users/edit'
-    assert_select "div.alert", "The form contains 4 errors"
+    assert_select "div.alert", "The form contains 5 errors"
   end
 
   test "successful edit with friendly forwarding" do
