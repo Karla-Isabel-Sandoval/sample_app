@@ -26,6 +26,7 @@ end
 
 group :development, :test do
   gem 'byebug', '9.0.0'
+  gem 'dotenv-rails'
 end
 
 group :test do
